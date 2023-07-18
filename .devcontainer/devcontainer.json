@@ -16,10 +16,8 @@
 			],
 			"settings": {
 				"php.executablePath": "/usr/local/bin/php"
-			}
+			},
+
 		}
 	}
-	// "settings": {
-    //     "php.executablePath": "/usr/local/bin/php"
-	// }
 }
