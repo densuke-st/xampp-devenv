@@ -1,0 +1,25 @@
+{
+    "dockerComposeFile": ["compose.yml"],
+    "service": "web",
+	"workspaceFolder": "/workspaces",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"MS-CEINTL.vscode-language-pack-ja",
+				"xdebug.php-pack",
+				"oderwat.indent-rainbow",
+				"mechatroner.rainbow-csv",
+				"starkwang.markdown",
+				"shd101wyy.markdown-preview-enhanced",
+				"PKief.material-icon-theme",
+				"donjayamanne.git-extension-pack"
+			],
+			"settings": {
+				"php.executablePath": "/usr/local/bin/php"
+			}
+		}
+	}
+	// "settings": {
+    //     "php.executablePath": "/usr/local/bin/php"
+	// }
+}

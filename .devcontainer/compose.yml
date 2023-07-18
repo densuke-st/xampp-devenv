@@ -1,0 +1,37 @@
+services:
+  web:
+    #image: php:apache
+    build: image
+    ports:
+      - 8080:80
+    volumes:
+      - ..:/workspaces:cached
+      - ../src:/var/www/html:cached
+    env_file:
+      - env.txt
+  db:
+    image: mariadb
+    env_file:
+      - env.txt
+      - pass.txt
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping -u root --password=$${MARIADB_ROOT_PASSWORD} -S /var/run/mysqld/mysqld.sock"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+  pma:
+    image: phpmyadmin
+    env_file:
+      - env.txt
+    ports:
+      - 8081:80
+    depends_on:
+      db:
+        condition: service_healthy
+
+
+volumes:
+  db:
