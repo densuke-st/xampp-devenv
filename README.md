@@ -27,6 +27,7 @@ XAMPPっぽい環境をDocker+DevContainerで作成するサンプルです。
 * サービス名 [web](http://localhost:8080/)
     * Webサーバー部分(PHP込み)
     * ディレクトリsrc以下が見えるようになっています
+    * http://localhost:8080/ でホストからアクセス可能
 * サービス名 db
     * DBサーバー(MariaDB)
     * 管理者設定が入っています、設定自体は `.devcontainer/pass.txt` に含まれています
@@ -34,6 +35,7 @@ XAMPPっぽい環境をDocker+DevContainerで作成するサンプルです。
 * サービス名 [pma](http://localhost:8081/)
     * phpMyAdminです
     * サービスdbを指す設定になっています、アカウントを入れれば接続できます
+    * http://localhost:8081/ でホストからアクセス可能
 
 # PHP設定について
 
