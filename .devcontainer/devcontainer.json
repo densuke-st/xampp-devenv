@@ -1,5 +1,6 @@
 {
-    "dockerComposeFile": ["compose.yml"],
+    "name": "XAMPPもどき",
+	"dockerComposeFile": ["compose.yml"],
     "service": "web",
 	"workspaceFolder": "/workspaces",
 	"customizations": {
