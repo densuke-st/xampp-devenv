@@ -1,0 +1,25 @@
+name: ドキュメント生成
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_doc:
+    name: build document
+    runs-on: ubuntu-latest
+    steps:
+    - name: install GNU make
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make
+    - name: install sphinx
+      run: |
+        pip install pipenv
+        pipenv install
+    - name: build document
+      run: |
+        PATH=$HOME/.local/bin:$PATH
+        make doc
+      
+
+        
